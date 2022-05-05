@@ -13,3 +13,6 @@ def Results(request):
 
 def Create(request):
     return render(request,"poll_temp/create_temp.html")
+
+def Vote(request):
+    return render(request,"poll_temp/vote.html")

@@ -24,4 +24,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.Home),
     path('admin_home',views.admin_home),
+    path('vote',views.Vote),
+    path('results',views.Results),
+    path('create',views.Create),
 ]+static(settings.STATIC_URL,document_root=settings.STATIC_ROOT)
