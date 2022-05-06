@@ -1,9 +1,6 @@
 from django.shortcuts import render
 
 # Create your views here.
-def admin_home(request):
-    return render(request,"poll_temp/base_template.html")
-
 
 def Home(request):
     return render(request,"poll_temp/home_temp.html")
