@@ -2,6 +2,7 @@
 {% block main%}
 <!DOCTYPE html>
 <html>
+  {% load widget_tweaks %}
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -40,6 +41,7 @@
           <div class="form-group">
             <label>Enter Poll Question</label>
             <textarea class="form-control" rows="3"></textarea>
+            {% render_field form.question %}
           </div>
         </div>
       </div>
@@ -50,7 +52,8 @@
           <!-- text input -->
           <div class="form-group">
             <label>Option1</label>
-            <input type="text" class="form-control" >
+            <input type="text" class="form-control"  id="option1" name="option1">
+            {% render_field forms.option_one %}
           </div>
         </div>
         <div class="col-sm-3">
