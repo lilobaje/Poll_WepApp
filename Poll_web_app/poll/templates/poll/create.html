@@ -1,0 +1,62 @@
+{% extends "poll/base.html" %}
+{% load widget_tweaks %}
+{% block main%}
+
+<div class="card-body col-12 col-md-6 mx-auto pt-3">
+    <form method="POST">
+      {% csrf_token %}
+      <div class="row">
+        <div class="col-sm-12">
+          <!-- textarea -->
+          <div class="form-group">
+            <label>Enter Poll Question</label>
+            {% render_field form.question class="form-control" %}
+            
+          </div>
+        </div>
+      </div>
+
+      <!-- input states -->
+      <div class="row">
+        
+        <div class="col-sm-3">
+          <!-- text input -->
+          <div class="form-group">
+            <label>Option1</label>
+            {% render_field form.option_one class="form-control" %}
+          </div>
+        </div>
+        
+        <div class="col-sm-3">
+          <div class="form-group">
+            <label>Option2</label>
+            {% render_field form.option_two class="form-control" %}
+          </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="form-group">
+              <label>Option3</label>
+              {% render_field form.option_three class="form-control" %}
+            </div>
+          </div>
+      </div>
+     
+      <div class="mx-auto pt-3">
+        <button type="submit" class="btn btn-block btn-primary">Submit</button>
+      </div>
+    </form>
+  </div>
+  
+  
+{% endblock main %}
+
+
+
+
+
+
+
+
+
+
+
